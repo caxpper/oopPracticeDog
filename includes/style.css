@@ -1,0 +1,40 @@
+#gameArea{
+	background-color: lavender;
+	height: 100vh;
+	width: 100vw;
+}
+.dog{
+	position: absolute;
+	background-image: url(../images/walkAnimation.png);
+	height: 44px;
+    width: 64px;
+}
+.reverseBubble .messageBubble{
+	transform: scaleX(-1);
+}
+.messageBubble{
+	background-color: white;
+    border-radius: 50%;
+    padding: 10%;
+    position: relative;
+    bottom: 100%;
+}
+.messageBubble::before{
+	content: '';
+	width: 0; 
+	height: 0; 
+	
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+  	border-top: 10px solid white;
+	position: absolute;
+	transform: translateX(-50%);
+	top: 100%;
+	left: 50%;
+}
+.messageBubble .message{
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-25%, -0%);
+}
